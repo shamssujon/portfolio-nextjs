@@ -11,6 +11,7 @@ export default function Home() {
 			</Head>
 			<main>
 				<h1 className="text-5xl">Hello World</h1>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam totam maiores, alias corrupti recusandae quae veritatis pariatur corporis sequi repudiandae debitis voluptatibus, sapiente, dolorem reprehenderit nesciunt! Cum, et vel? Quo quidem esse voluptates consectetur omnis repellendus quis officia numquam autem atque, quaerat minus architecto doloribus corporis magnam harum iste nisi.</p>
 			</main>
 		</>
 	);

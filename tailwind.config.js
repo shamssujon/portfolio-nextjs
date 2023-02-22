@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
-// const plugin = require("tailwindcss/plugin");
-// const defaultTheme = require("tailwindcss/defaultTheme");
+const plugin = require("tailwindcss/plugin");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
 	content: ["./src/**/*.{js,ts,jsx,tsx}"],
@@ -21,7 +21,8 @@ module.exports = {
 			fontFamily: {
 				// sans: ["Lexend", ...defaultTheme.fontFamily.sans],
 				// sans: ["Livvic", ...defaultTheme.fontFamily.sans],
-				// serif: ["MuseoModerno", ...defaultTheme.fontFamily.sans],
+				sans: ["var(--font-livvic)", ...defaultTheme.fontFamily.sans],
+				serif: ["var(--font-museoModerno)", ...defaultTheme.fontFamily.sans],
 			},
 			aspectRatio: {
 				"4/3": "4 / 3",
