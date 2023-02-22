@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
-import logo from "../assets/img/logo.svg";
+import { useState } from "react";
 import Backdrop from "./Backdrop";
 
-const Navbar = () => {
+export default function Navbar() {
 	const menuList = [
 		{ title: "About", path: "About" },
 		{ title: "Services", path: "Services" },
@@ -25,7 +24,13 @@ const Navbar = () => {
 					<div className="relative flex items-center justify-between">
 						{/* Logo */}
 						<Link href="/" className="relative z-50 block">
-							<Image src={logo} alt="Shamsul Islam Sujon Logo" className="h-10 w-10 lg:h-12 lg:w-12" />
+							<Image
+								src="/images/logo.svg"
+								alt="Shamsul Islam Sujon Logo"
+								className="h-10 w-10 lg:h-12 lg:w-12"
+								width={50}
+								height={50}
+							/>
 						</Link>
 
 						{/* Menu Icon */}
@@ -77,6 +82,4 @@ const Navbar = () => {
 			</div>
 		</>
 	);
-};
-
-export default Navbar;
+}

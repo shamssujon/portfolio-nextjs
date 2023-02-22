@@ -1,16 +1,15 @@
-import React from "react";
+import Image from "next/image";
 import { BsGithub, BsInstagram } from "react-icons/bs";
 import { GrLinkedinOption } from "react-icons/gr";
-import Portrait from "../assets/img/portrait.jpg";
 
-const Intro = () => {
+export default function Intro() {
 	return (
 		<section className="pt-2 pb-14 md:pt-10 md:pb-20 2xl:py-28">
 			<div className="container">
 				<div className="grid items-center gap-10 lg:grid-cols-2 xl:gap-20 xl:px-32">
 					<div className="">
 						<div className="relative mx-auto aspect-square max-w-lg overflow-hidden rounded-full border-4 border-emerald-400/50 xl:border-8">
-							<img src={Portrait} alt="Sujon portrait" className="h-full w-full object-cover" />
+							<Image src="/images/portrait.jpg" alt="Sujon portrait" className="h-full w-full object-cover" width={600} height={600} />
 						</div>
 					</div>
 					<div className="">
@@ -54,6 +53,4 @@ const Intro = () => {
 			</div>
 		</section>
 	);
-};
-
-export default Intro;
+}

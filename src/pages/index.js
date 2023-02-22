@@ -1,3 +1,6 @@
+import About from "@/components/About";
+import Intro from "@/components/Intro";
+import Services from "@/components/Services";
 import Head from "next/head";
 
 export default function Home() {
@@ -10,8 +13,9 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main>
-				<h1 className="text-5xl">Hello World</h1>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam totam maiores, alias corrupti recusandae quae veritatis pariatur corporis sequi repudiandae debitis voluptatibus, sapiente, dolorem reprehenderit nesciunt! Cum, et vel? Quo quidem esse voluptates consectetur omnis repellendus quis officia numquam autem atque, quaerat minus architecto doloribus corporis magnam harum iste nisi.</p>
+				<Intro />
+				<About />
+				<Services />
 			</main>
 		</>
 	);

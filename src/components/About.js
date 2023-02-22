@@ -1,7 +1,5 @@
-import React from "react";
-import Resume from "../assets/pdf/Shams-Sujon-Resume.pdf";
 
-const About = () => {
+export default function About() {
 	return (
 		<section id="About" className="py-14 md:py-20 xl:py-28">
 			<div className="container">
@@ -12,8 +10,9 @@ const About = () => {
 					<div className="lg:col-span-5 lg:mt-24">
 						<div className="space-y-4">
 							<p className="text-base leading-relaxed md:text-xl md:leading-relaxed">
-								I am Shamsul Islam Sujon from Kushtia, Bangladesh. My academic background is Bachelor's in
-								Computer Science. Have been working as a freelance Front-end Web Developer since 2016.
+								I am Shamsul Islam Sujon from Kushtia, Bangladesh. My academic background is
+								Bachelor&apos;s in Computer Science. Have been working as a freelance Front-end Web
+								Developer since 2016.
 							</p>
 							<p className="text-base leading-relaxed md:text-xl md:leading-relaxed">
 								The technologies I mostly work with are <strong className="font-semibold">HTML</strong>,{" "}
@@ -35,8 +34,9 @@ const About = () => {
 						</div>
 						<div className="mt-8">
 							<a
-								download
-								href={Resume}
+								href="https://drive.google.com/file/d/1RGw9tDN1LAnE5qf75J4_LEjCzXdiHbHT/view?usp=share_link"
+								target="_blank"
+								rel="noreferrer"
 								className="inline-flex items-center justify-center gap-2 rounded bg-emerald-500 px-8 py-4 text-center font-semibold uppercase tracking-wide text-white transition hover:bg-emerald-600">
 								Download Resume
 							</a>
@@ -46,6 +46,4 @@ const About = () => {
 			</div>
 		</section>
 	);
-};
-
-export default About;
+}

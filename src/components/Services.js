@@ -1,7 +1,32 @@
-import React from "react";
-import { Code, Pen } from "../../components/Icons";
+import Image from "next/image";
 
-const Services = () => {
+const servicesData = [
+	{
+		id: 1,
+		title: "Frontend Development",
+		icon: "/images/icons/services/code.svg",
+		serviceFeatures: [
+			"Convert PSD/XD/Figma files to HTML/CSS/JS.",
+			"Build HTML templates for marketplace like ThemeForest.",
+			"Build single or multi-page static websites such as online resumes, portfolio, blog, informational websites, landing page, etc.",
+			"Build and customize Wordpress and Shopify themes.",
+		],
+	},
+	{
+		id: 2,
+		title: "Web UI/UX Design",
+		icon: "/images/icons/services/pen.svg",
+		serviceFeatures: [
+			"Web page design.",
+			"Theme design (WordPress, Shopify, etc.)",
+			"App design",
+			"UX Prototyping",
+			"Wireframing",
+		],
+	},
+];
+
+export default function Services() {
 	return (
 		<section id="Services" className="py-14 md:py-20 xl:py-28">
 			<div className="container">
@@ -11,35 +36,23 @@ const Services = () => {
 					</div>
 					<div className="lg:col-span-5 lg:mt-24">
 						<div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-							<div className="space-y-8">
-								<img src={Code} alt="" className="h-20 w-20" />
-								<h4 className="text-2xl">Frontend Development</h4>
-								<ul className="list-disc space-y-4 pl-2 marker:text-emerald-400 marker:content-['●']">
-									<li className="pl-2">Convert PSD/XD/Figma files to HTML/CSS/JS.</li>
-									<li className="pl-2">Build HTML templates for marketplace like ThemeForest.</li>
-									<li className="pl-2">
-										Build single or multi-page static websites such as online resumes, portfolio,
-										blog, informational websites, landing page, etc.
-									</li>
-									<li className="pl-2">Build and customize Wordpress and Shopify themes</li>
-								</ul>
-							</div>
-							<div className="space-y-8">
-								<img src={Pen} alt="" className="h-20 w-20" />
-								<h4 className="text-2xl">Web UI/UX Design</h4>
-								<ul className="list-disc space-y-4 pl-2 marker:text-emerald-400 marker:content-['●']">
-									<li className="pl-2">Web page design.</li>
-									<li className="pl-2">Theme design (WordPress, Shopify, etc.)</li>
-									<li className="pl-2">App design</li>
-									<li className="pl-2">UX wireframing</li>
-								</ul>
-							</div>
+							{servicesData.map((service) => (
+								<div className="space-y-8" key={service.id}>
+									<Image src={service.icon} alt={`${service.title} icon`} className="h-20 w-20" width={80} height={80} />
+									<h4 className="text-2xl">{service.title}</h4>
+									<ul className="list-disc space-y-4 pl-2 marker:text-emerald-400 marker:content-['●']">
+										{service.serviceFeatures.map((serviceFeatureItem, index) => (
+											<li key={index} className="pl-2">
+												{serviceFeatureItem}
+											</li>
+										))}
+									</ul>
+								</div>
+							))}
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 	);
-};
-
-export default Services;
+}
