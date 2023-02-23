@@ -1,6 +1,9 @@
 import About from "@/components/About";
+import Contact from "@/components/Contact";
 import Intro from "@/components/Intro";
 import Services from "@/components/Services";
+import Skills from "@/components/Skills";
+import Testimonials from "@/components/Testimonials";
 import Head from "next/head";
 
 export default function Home() {
@@ -16,6 +19,9 @@ export default function Home() {
 				<Intro />
 				<About />
 				<Services />
+				<Skills />
+				<Testimonials />
+				<Contact />
 			</main>
 		</>
 	);
