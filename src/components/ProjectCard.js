@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import Image from "next/image";
+import Link from "next/link";
 
 const ProjectCard = ({ project }) => {
 	const { thumbnail, title, url, slug, technologies } = project;
@@ -13,10 +13,12 @@ const ProjectCard = ({ project }) => {
 					<div className="h-2 w-2 rounded-full bg-red-400"></div>
 				</div>
 				<div className="relative overflow-hidden">
-					<img
+					<Image
 						className="aspect-4/3 h-full w-full object-cover object-top transition duration-300 group-hover:scale-105"
 						src={thumbnail}
 						alt={title}
+						width={750}
+						height={550}
 					/>
 				</div>
 			</div>
@@ -34,7 +36,7 @@ const ProjectCard = ({ project }) => {
 					</p>
 				</div>
 				<Link
-					to={`projects/${slug}`}
+					href={`works/${slug}`}
 					className="text-4xl after:absolute after:top-0 after:left-0 after:h-full after:w-full">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"

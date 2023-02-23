@@ -5,10 +5,10 @@ import Backdrop from "./Backdrop";
 
 export default function Navbar() {
 	const menuList = [
-		{ title: "About", path: "About" },
-		{ title: "Services", path: "Services" },
-		{ title: "Works", path: "FeaturedWorks" },
-		{ title: "Contact", path: "Contact" },
+		{ title: "About", path: "/#About" },
+		{ title: "Services", path: "/#Services" },
+		{ title: "Works", path: "/#FeaturedWorks" },
+		{ title: "Contact", path: "/#Contact" },
 	];
 
 	const [openMenu, setOpenMenu] = useState(false);
@@ -71,6 +71,7 @@ export default function Navbar() {
 								}`}>
 								<Link
 									href={menuItem.path}
+									scroll={false}
 									className="inline-block cursor-pointer p-2 font-serif text-4xl transition hover:text-emerald-400 md:text-6xl"
 									onClick={handleOpenMenu}>
 									{menuItem.title}
