@@ -35,7 +35,7 @@ const FeaturedWorks = () => {
 		{
 			slug: "tsl",
 			title: "TSL website redesign",
-			thumbnail: "/images/works/TSL-homepage-presentation.jpg",
+			thumbnail: "/images/works/tsl/tsl-cover.jpg",
 			description:
 				"Technological Solutions Limited wanted to update their website design. I have redesigned the website pages with Bootstrap 5.",
 			technologies: ["HTML", "SCSS", "JS", "UI/UX", "Website redesign"],
@@ -44,7 +44,7 @@ const FeaturedWorks = () => {
 		{
 			slug: "covira",
 			title: "Covira",
-			thumbnail: "/images/works/covira.jpg",
+			thumbnail: "/images/works/tsl/tsl-cover.jpg",
 			description:
 				"Covira is a Corona virus prevention and awareness template which is listed on Themeforest. I have coded the provided design to HTML5 template.",
 			technologies: ["HTML", "CSS", "JS", "PSD to HTML", "Themeforest"],
