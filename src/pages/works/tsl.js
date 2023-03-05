@@ -10,12 +10,40 @@ const images = [
 		title: "Homepage",
 	},
 	{
-		src: "/images/works/aarepair.jpg",
-		title: "TSL 2",
+		src: "/images/works/tsl/about.png",
+		title: "About",
 	},
 	{
-		src: "/images/works/appai.jpg",
-		title: "TSL 3",
+		src: "/images/works/tsl/blog.png",
+		title: "Blog",
+	},
+	{
+		src: "/images/works/tsl/article.png",
+		title: "Blog",
+	},
+	{
+		src: "/images/works/tsl/article-elements.png",
+		title: "Blog",
+	},
+	{
+		src: "/images/works/tsl/service-layout-1.png",
+		title: "Blog",
+	},
+	{
+		src: "/images/works/tsl/service-layout-2.png",
+		title: "Blog",
+	},
+	{
+		src: "/images/works/tsl/service-layout-3.png",
+		title: "Blog",
+	},
+	{
+		src: "/images/works/tsl/service-layout-4.png",
+		title: "Blog",
+	},
+	{
+		src: "/images/works/tsl/contact.png",
+		title: "Blog",
 	},
 ];
 
@@ -84,11 +112,13 @@ export default function Tsl() {
 							<ul className="grid grid-cols-2">
 								<li>HTML</li>
 								<li>CSS/SCSS</li>
-								<li>Bootstrap</li>
+								<li>Bootstrap 4</li>
+								<li>Javascript</li>
 								<li>Swiper JS</li>
 								<li>AOS</li>
 								<li>Figma</li>
 								<li>Illustrator</li>
+								<li>Photoshop</li>
 								<li>and more.</li>
 							</ul>
 							<h3 className="font-serif">Gallery</h3>
@@ -111,7 +141,7 @@ export default function Tsl() {
 												alt=""
 												width={500}
 												height={500}
-												className="absolute inset-0 h-full w-full cursor-zoom-in object-cover object-top group-hover:object-bottom transition-all group-hover:duration-[3000ms]"
+												className="absolute inset-0 h-full w-full cursor-zoom-in object-cover object-top transition-all group-hover:object-bottom group-hover:duration-[3000ms]"
 											/>
 										</div>
 									))}
@@ -120,7 +150,7 @@ export default function Tsl() {
 								open={openGalleryPopup}
 								close={() => setOpenGalleryPopup(false)}
 								index={currentImageIndex}
-								animation={{ fade: 330, swipe: 500 }}
+								animation={{ fade: 500, swipe: 300 }}
 								slides={images}
 							/>
 						</article>
