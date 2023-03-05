@@ -7,7 +7,7 @@ export default function Navbar() {
 	const menuList = [
 		{ title: "About", path: "/#About" },
 		{ title: "Services", path: "/#Services" },
-		{ title: "Works", path: "/#FeaturedWorks" },
+		{ title: "Works", path: "/#Works" },
 		{ title: "Contact", path: "/#Contact" },
 	];
 

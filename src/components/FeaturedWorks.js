@@ -53,7 +53,7 @@ const FeaturedWorks = () => {
 	];
 
 	return (
-		<section id="FeaturedWorks" className="py-14 md:py-20 xl:py-28">
+		<section id="Works" className="py-14 md:py-20 xl:py-28">
 			<div className="container">
 				<div className="grid gap-10 md:px-16 lg:grid-cols-8 xl:gap-20 xl:px-32">
 					<div className="lg:col-span-3">
