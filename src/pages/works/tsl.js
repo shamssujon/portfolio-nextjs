@@ -3,6 +3,11 @@ import Link from "next/link";
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+import Captions from "yet-another-react-lightbox/plugins/captions";
+import "yet-another-react-lightbox/plugins/captions.css";
 
 const images = [
 	{
@@ -19,31 +24,31 @@ const images = [
 	},
 	{
 		src: "/images/works/tsl/article.png",
-		title: "Blog",
+		title: "Article",
 	},
 	{
 		src: "/images/works/tsl/article-elements.png",
-		title: "Blog",
+		title: "Article Elements",
 	},
 	{
 		src: "/images/works/tsl/service-layout-1.png",
-		title: "Blog",
+		title: "Service Layout 1",
 	},
 	{
 		src: "/images/works/tsl/service-layout-2.png",
-		title: "Blog",
+		title: "Service Layout 2",
 	},
 	{
 		src: "/images/works/tsl/service-layout-3.png",
-		title: "Blog",
+		title: "Service Layout 3",
 	},
 	{
 		src: "/images/works/tsl/service-layout-4.png",
-		title: "Blog",
+		title: "Service Layout 4",
 	},
 	{
 		src: "/images/works/tsl/contact.png",
-		title: "Blog",
+		title: "Contact",
 	},
 ];
 
@@ -147,11 +152,13 @@ export default function Tsl() {
 									))}
 							</div>
 							<Lightbox
+								styles={{ container: { backgroundColor: "rgba(0, 0, 0, .95)" }, captionsTitleContainer: {backgroundColor: "transparent"} }}
 								open={openGalleryPopup}
 								close={() => setOpenGalleryPopup(false)}
 								index={currentImageIndex}
-								animation={{ fade: 500, swipe: 300 }}
 								slides={images}
+								animation={{ fade: 500, swipe: 300 }}
+								plugins={[Zoom, Thumbnails, Captions]}
 							/>
 						</article>
 					</div>

@@ -1,5 +1,6 @@
 import Layout from "../components/layout";
 import "@/styles/globals.css";
+import "@/styles/project.css";
 import { Livvic, MuseoModerno } from "@next/font/google";
 
 const livvic = Livvic({
