@@ -1,13 +1,14 @@
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
+import { BsArrowLeft } from "react-icons/bs";
 import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
-import Zoom from "yet-another-react-lightbox/plugins/zoom";
-import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
-import "yet-another-react-lightbox/plugins/thumbnails.css";
 import Captions from "yet-another-react-lightbox/plugins/captions";
 import "yet-another-react-lightbox/plugins/captions.css";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import "yet-another-react-lightbox/styles.css";
 
 const images = [
 	{
@@ -56,12 +57,21 @@ export default function Tsl() {
 	const [openGalleryPopup, setOpenGalleryPopup] = useState(false);
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+	const router = useRouter();
+
 	return (
 		<section id="FeaturedWorks" className="py-14 md:py-20 xl:py-28">
 			<div className="container">
 				<div className="grid gap-10 md:px-16 lg:grid-cols-8 xl:gap-20 xl:px-32">
 					<div className="lg:col-span-3">
-						<div className="sticky top-10 space-y-10">
+						<div className="sticky top-20 space-y-10">
+							<button
+								type="button"
+								onClick={() => router.back()}
+								className="flex items-center justify-center gap-2 rounded border border-transparent px-4 py-2 text-center transition hover:border-emerald-400">
+								<BsArrowLeft />
+								<span>Go back</span>
+							</button>
 							<h2 className="font-serif text-4xl font-medium md:text-5xl 2xl:text-6xl 2xl:leading-tight">
 								Technological Solutions Limited
 							</h2>
