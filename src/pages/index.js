@@ -23,7 +23,6 @@ export default function Home() {
 				<Skills />
 				<FeaturedWorks />
 				<Testimonials />
-				<Contact />
 			</main>
 		</>
 	);
