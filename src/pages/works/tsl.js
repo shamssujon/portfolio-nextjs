@@ -134,31 +134,36 @@ export default function Tsl() {
 
 								{images &&
 									images.map((item, index) => (
-										<div
-											key={index}
-											className="group relative aspect-square overflow-hidden border shadow-lg"
-											onClick={() => {
-												setOpenGalleryPopup(true);
-												setCurrentImageIndex(index);
-											}}>
-											<Image
-												src={item.src}
-												alt=""
-												width={500}
-												height={500}
-												className="absolute inset-0 h-full w-full cursor-zoom-in object-cover object-top transition-all group-hover:object-bottom group-hover:duration-[3000ms]"
-											/>
+										<div key={index} className="">
+											<div
+												className="group relative aspect-square overflow-hidden border shadow-lg"
+												onClick={() => {
+													setOpenGalleryPopup(true);
+													setCurrentImageIndex(index);
+												}}>
+												<Image
+													src={item.src}
+													alt=""
+													width={500}
+													height={500}
+													className="absolute inset-0 h-full w-full cursor-zoom-in object-cover object-top transition-all group-hover:object-bottom group-hover:duration-[3000ms]"
+												/>
+											</div>
+											<h6 className="mt-4 font-serif font-medium">{item.title}</h6>
 										</div>
 									))}
 							</div>
 							<Lightbox
-								styles={{ container: { backgroundColor: "rgba(0, 0, 0, .95)" }, captionsTitleContainer: {backgroundColor: "transparent"} }}
 								open={openGalleryPopup}
 								close={() => setOpenGalleryPopup(false)}
 								index={currentImageIndex}
 								slides={images}
 								animation={{ fade: 500, swipe: 300 }}
 								plugins={[Zoom, Thumbnails, Captions]}
+								styles={{
+									container: { backgroundColor: "rgba(0, 0, 0, .95)" },
+									captionsTitleContainer: { backgroundColor: "transparent" },
+								}}
 							/>
 						</article>
 					</div>
