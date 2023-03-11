@@ -1,56 +1,14 @@
 import ProjectCard from "@/components/ProjectCard";
 import Link from "next/link";
+import useSwr from "swr";
 
-const FeaturedWorks = () => {
-	// const [projectLoadingError, setProjectLoadingError] = useState(null);
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
-	// const {
-	// 	data: projects,
-	// 	isLoading: loadingProjects,
-	// 	error: projectsError,
-	// } = useQuery({
-	// 	queryKey: ["projectsData"],
-	// 	queryFn: async () => {
-	// 		try {
-	// 			const response = await axios.get("https://portfolio-react-server.vercel.app/projects");
-	// 			console.log(response.data);
-	// 			return response.data;
-	// 		} catch (error) {
-	// 			console.error(error);
-	// 			setProjectLoadingError(error.message);
-	// 		}
-	// 	},
-	// });
-
-	const projects = [
-		{
-			slug: "reboot",
-			title: "Reboot",
-			thumbnail: "/images/works/reboot.png",
-			description:
-				"Reboot is a pre-owned online computer market built to connect buyers and sellers to buy/sell their used computer gadgets.",
-			technologies: ["React", "TailwindCSS", "Node JS", "Express JS", "MongoDB"],
-			url: "https://reboot-9dfe1.web.app/",
-		},
-		{
-			slug: "tsl",
-			title: "TSL website redesign",
-			thumbnail: "/images/works/tsl/tsl-cover.jpg",
-			description:
-				"Technological Solutions Limited wanted to update their website design. I have redesigned the website pages with Bootstrap 5.",
-			technologies: ["HTML", "SCSS", "JS", "UI/UX", "Website redesign"],
-			url: "https://tsl-home-new.shamssujon.com/",
-		},
-		{
-			slug: "covira",
-			title: "Covira",
-			thumbnail: "/images/works/tsl/tsl-cover.jpg",
-			description:
-				"Covira is a Corona virus prevention and awareness template which is listed on Themeforest. I have coded the provided design to HTML5 template.",
-			technologies: ["HTML", "CSS", "JS", "PSD to HTML", "Themeforest"],
-			url: "https://themeforest.net/item/covira-coronavirus-prevention-template/26492606",
-		},
-	];
+export default function FeaturedWorks() {
+	const { data: projects, error, isLoading } = useSwr("/api/projects", fetcher);
+	if (error) return <div>Failed to load projects</div>;
+	if (isLoading) return <div>Loading...</div>;
+	if (!projects) return null;
 
 	return (
 		<section id="Works" className="py-14 md:py-20 xl:py-28">
@@ -63,7 +21,7 @@ const FeaturedWorks = () => {
 						<div className="space-y-14 md:space-y-20">
 							{projects &&
 								projects.map((project) => (
-									<ProjectCard key={project.slug} project={project}></ProjectCard>
+									<ProjectCard key={project.id} project={project}></ProjectCard>
 								))}
 						</div>
 
@@ -79,6 +37,4 @@ const FeaturedWorks = () => {
 			</div>
 		</section>
 	);
-};
-
-export default FeaturedWorks;
+}
