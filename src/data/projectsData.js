@@ -59,8 +59,8 @@ export const projects = [
 				url: null,
 			},
 			timeline: {
-				start: "June 2021",
-				end: "July 2021",
+				start: "Nov 2022",
+				end: "Dec 2022",
 			},
 		},
 		url: {

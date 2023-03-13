@@ -25,7 +25,6 @@ const ProjectCard = ({ project }) => {
 			<div className="flex w-full items-center justify-between pt-6">
 				<div className="space-y-4">
 					<h4 className="text-2xl font-serif font-medium transition group-hover:text-emerald-400">{title}</h4>
-					<p>{overview}</p>
 					<p className="flex flex-wrap gap-2">
 						{tags.map((item, index) => (
 							<span

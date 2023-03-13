@@ -25,13 +25,13 @@ export default function FeaturedWorks() {
 								))}
 						</div>
 
-						<div className="mt-20 text-center">
+						{/* <div className="mt-20 text-center">
 							<Link
 								href="/works"
 								className="inline-flex items-center justify-center gap-2 rounded bg-emerald-500 px-8 py-4 text-center font-semibold uppercase tracking-wide text-white transition hover:bg-emerald-600">
 								Browse all projects
 							</Link>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>
