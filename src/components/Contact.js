@@ -85,8 +85,8 @@ const Contact = () => {
 				<div className="col-span-full sm:col-span-10 sm:col-start-2 lg:col-span-6 lg:col-start-6 lg:mt-24">
 					<div className="flex flex-col justify-between gap-12 md:flex-row">
 						<div className="item">
-							<h4 className="mb-6 font-serif text-2xl font-medium">Message me on</h4>
-							<ul className="space-y-5">
+							<h4 className="mb-8 font-serif text-2xl font-medium">Message me on</h4>
+							<ul className="space-y-3">
 								{messageData &&
 									messageData.map((item) => (
 										<li key={item.id}>
@@ -94,17 +94,27 @@ const Contact = () => {
 												target="_blank"
 												rel="noreferrer"
 												href={item.url}
-												className="flex items-center gap-4">
-												<Image src={item.icon} alt="" className="w-10" width={40} height={40} />
-												<span className="text-lg font-medium">{item.title}</span>
+												className="group flex items-center gap-4">
+												<span className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-emerald-400/40 p-2 transition group-hover:border-emerald-400 lg:h-14 lg:w-14">
+													<Image
+														src={item.icon}
+														alt=""
+														className="h-8 w-8"
+														width={40}
+														height={40}
+													/>
+												</span>
+												<span className="text-lg font-medium transition group-hover:text-emerald-400">
+													{item.title}
+												</span>
 											</a>
 										</li>
 									))}
 							</ul>
 						</div>
 						<div className="item">
-							<h4 className="mb-6 font-serif text-2xl font-medium">Follow me on</h4>
-							<ul className="space-y-5">
+							<h4 className="mb-8 font-serif text-2xl font-medium">Follow me on</h4>
+							<ul className="space-y-3">
 								{followData &&
 									followData.map((item) => (
 										<li key={item.id}>
@@ -112,17 +122,27 @@ const Contact = () => {
 												target="_blank"
 												rel="noreferrer"
 												href={item.url}
-												className="flex items-center gap-4">
-												<Image src={item.icon} alt="" className="w-10" width={40} height={40} />
-												<span className="text-lg font-medium">{item.title}</span>
+												className="group flex items-center gap-4">
+												<span className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-emerald-400/40 p-2 transition group-hover:border-emerald-400 lg:h-14 lg:w-14">
+													<Image
+														src={item.icon}
+														alt=""
+														className="h-8 w-8"
+														width={40}
+														height={40}
+													/>
+												</span>
+												<span className="text-lg font-medium transition group-hover:text-emerald-400">
+													{item.title}
+												</span>
 											</a>
 										</li>
 									))}
 							</ul>
 						</div>
 						<div className="item">
-							<h4 className="mb-6 font-serif text-2xl font-medium">Hire me on</h4>
-							<ul className="space-y-5">
+							<h4 className="mb-8 font-serif text-2xl font-medium">Hire me on</h4>
+							<ul className="space-y-3">
 								{hireData &&
 									hireData.map((item) => (
 										<li key={item.id}>
@@ -130,9 +150,19 @@ const Contact = () => {
 												target="_blank"
 												rel="noreferrer"
 												href={item.url}
-												className="flex items-center gap-4">
-												<Image src={item.icon} alt="" className="w-10" width={40} height={40} />
-												<span className="text-lg font-medium">{item.title}</span>
+												className="group flex items-center gap-4">
+												<span className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-emerald-400/40 p-2 transition group-hover:border-emerald-400 lg:h-14 lg:w-14">
+													<Image
+														src={item.icon}
+														alt=""
+														className="h-8 w-8"
+														width={40}
+														height={40}
+													/>
+												</span>
+												<span className="text-lg font-medium transition group-hover:text-emerald-400">
+													{item.title}
+												</span>
 											</a>
 										</li>
 									))}

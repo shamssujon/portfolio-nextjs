@@ -23,7 +23,7 @@ const frameworks = [
 	{ title: "Git", icon: "/images/tools/git.svg" },
 	{ title: "Gulp", icon: "/images/tools/gulp.svg" },
 	{ title: "Vite", icon: "/images/tools/vite.svg" },
-	{ title: "NPM", icon: "/images/tools/npm.svg" },
+	// { title: "NPM", icon: "/images/tools/npm.svg" },
 ];
 
 const devTools = [
@@ -51,38 +51,22 @@ const Skills = () => {
 					</div>
 					<div className="lg:col-span-5 lg:mt-24">
 						<div className="grid gap-12 divide-y-2">
-							{/* <div className="">
-								<h4 className="mb-8 font-serif text-2xl font-semibold">Languages</h4>
-								<ul className="flex flex-wrap items-center gap-8">
-									{languages &&
-										languages.map((item, index) => (
-											<li className="flex items-center gap-4" key={index}>
-												<Image
-													src={item.icon}
-													alt=""
-													className="h-10 w-10"
-													width={40}
-													height={40}
-												/>
-												<span className="text-lg font-medium">{item.title}</span>
-											</li>
-										))}
-								</ul>
-							</div> */}
-							<div className="pt-12">
+							<div className="lg:pt-12">
 								<h4 className="mb-8 font-serif text-2xl font-semibold">Development</h4>
-								<ul className="flex flex-wrap items-center gap-8">
+								<ul className="flex flex-wrap items-center gap-6 lg:gap-8">
 									{frameworks &&
 										frameworks.map((item, index) => (
-											<li className="flex items-center gap-4" key={index}>
-												<Image
-													src={item.icon}
-													alt=""
-													className="h-10 w-10"
-													width={40}
-													height={40}
-												/>
-												<span className="text-lg font-medium">{item.title}</span>
+											<li className="flex items-center gap-3 lg:gap-4" key={index}>
+												<span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-emerald-400/40 p-2 lg:h-14 lg:w-14">
+													<Image
+														src={item.icon}
+														alt=""
+														className="h-8 w-8"
+														width={40}
+														height={40}
+													/>
+												</span>
+												<span className="font-medium lg:text-lg">{item.title}</span>
 											</li>
 										))}
 								</ul>
@@ -107,18 +91,20 @@ const Skills = () => {
 							</div> */}
 							<div className="pt-12">
 								<h4 className="mb-8 font-serif text-2xl font-semibold">Design</h4>
-								<ul className="flex flex-wrap items-center gap-8">
+								<ul className="flex flex-wrap items-center gap-6 lg:gap-8">
 									{designTools &&
 										designTools.map((item, index) => (
-											<li className="flex items-center gap-4" key={index}>
-												<Image
-													src={item.icon}
-													alt=""
-													className="h-10 w-10"
-													width={40}
-													height={40}
-												/>
-												<span className="text-lg font-medium">{item.title}</span>
+											<li className="flex items-center gap-3 lg:gap-4" key={index}>
+												<span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-emerald-400/40 p-2 lg:h-14 lg:w-14">
+													<Image
+														src={item.icon}
+														alt=""
+														className="h-8 w-8"
+														width={40}
+														height={40}
+													/>
+												</span>
+												<span className="font-medium lg:text-lg">{item.title}</span>
 											</li>
 										))}
 								</ul>
