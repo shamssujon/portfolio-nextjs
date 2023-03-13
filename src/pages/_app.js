@@ -4,16 +4,19 @@ import "@/styles/project.css";
 import { Livvic, MuseoModerno } from "@next/font/google";
 
 const livvic = Livvic({
+	variable: "--font-livvic",
+	subsets: ["latin"],
 	weight: ["300", "400", "500", "600", "700"],
 	style: ["normal", "italic"],
-	subsets: ["latin"],
-	variable: '--font-livvic'
+	display: "swap",
 });
 
 const museoModerno = MuseoModerno({
+	variable: "--font-museoModerno",
 	subsets: ["latin"],
-	variable: '--font-museoModerno'
-	
+	weight: ["300", "400", "500", "600", "700"],
+	style: ["normal", "italic"],
+	display: "swap",
 });
 
 export default function App({ Component, pageProps }) {
