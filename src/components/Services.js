@@ -32,14 +32,20 @@ export default function Services() {
 			<div className="container">
 				<div className="grid gap-10 md:px-16 lg:grid-cols-8 xl:gap-20 xl:px-32">
 					<div className="lg:col-span-3">
-						<h2 className="font-serif text-4xl md:text-5xl 2xl:text-6xl">My services</h2>
+						<h2 className="font-serif text-4xl font-medium md:text-5xl 2xl:text-6xl">Services</h2>
 					</div>
 					<div className="lg:col-span-5 lg:mt-24">
 						<div className="grid grid-cols-1 gap-12 md:grid-cols-2">
 							{servicesData.map((service) => (
 								<div className="space-y-8" key={service.id}>
-									<Image src={service.icon} alt={`${service.title} icon`} className="h-20 w-20" width={80} height={80} />
-									<h4 className="text-2xl">{service.title}</h4>
+									<Image
+										src={service.icon}
+										alt={`${service.title} icon`}
+										className="h-20 w-20"
+										width={80}
+										height={80}
+									/>
+									<h4 className="font-serif text-2xl font-semibold">{service.title}</h4>
 									<ul className="list-disc space-y-4 pl-2 marker:text-emerald-400 marker:content-['●']">
 										{service.serviceFeatures.map((serviceFeatureItem, index) => (
 											<li key={index} className="pl-2">

@@ -47,7 +47,7 @@ const Skills = () => {
 			<div className="container">
 				<div className="grid gap-10 md:px-16 lg:grid-cols-8 xl:gap-20 xl:px-32">
 					<div className="lg:col-span-3">
-						<h2 className="font-serif text-4xl md:text-5xl 2xl:text-6xl">Skills</h2>
+						<h2 className="font-serif text-4xl font-medium md:text-5xl 2xl:text-6xl">Skills</h2>
 					</div>
 					<div className="lg:col-span-5 lg:mt-24">
 						<div className="grid gap-12 divide-y-2">

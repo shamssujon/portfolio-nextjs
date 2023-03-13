@@ -114,7 +114,7 @@ export default function ProjectPage() {
 								<li>and more.</li>
 							</ul>
 							<h3 className="font-serif">Gallery</h3>
-							<div className="not-prose grid grid-cols-2 gap-8">
+							<div className="not-prose grid grid-cols-2 gap-6 lg:gap-8">
 								{images.gallery.map((item, index) => (
 									<div key={index} className="">
 										<div
@@ -131,7 +131,7 @@ export default function ProjectPage() {
 												className="absolute inset-0 h-full w-full cursor-zoom-in object-cover object-top transition-all group-hover:object-bottom group-hover:duration-[3000ms]"
 											/>
 										</div>
-										<h6 className="mt-4 font-serif font-medium">{item.title}</h6>
+										<h6 className="mt-2 lg:mt-4 font-serif font-medium">{item.title}</h6>
 									</div>
 								))}
 							</div>

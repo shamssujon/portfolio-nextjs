@@ -41,10 +41,10 @@ export default function Testimonials() {
 			<div className="container">
 				<div className="grid gap-10 md:px-16 lg:grid-cols-8 xl:gap-20 xl:px-32">
 					<div className="lg:col-span-3">
-						<h2 className="font-serif text-4xl md:text-5xl 2xl:text-6xl">Testimonials</h2>
+						<h2 className="font-serif text-4xl font-medium md:text-5xl 2xl:text-6xl">Reviews</h2>
 					</div>
 					<div className="lg:col-span-5 lg:mt-24">
-						<div className="space-y-12 divide-y-2 divide-emerald-400/20">
+						<div className="space-y-12 divide-y-2">
 							{testimonialData &&
 								testimonialData.map((testimonialItem) => (
 									<div key={testimonialItem.id} className="pt-12 first-of-type:pt-0">

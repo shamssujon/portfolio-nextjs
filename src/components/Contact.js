@@ -80,12 +80,12 @@ const Contact = () => {
 		<section id="Contact" className="py-14 md:py-20 xl:py-28">
 			<div className="container grid grid-cols-12 gap-y-8 lg:gap-x-8">
 				<div className="col-span-full sm:col-span-10 sm:col-start-2 lg:col-span-4 lg:col-start-2">
-					<h2 className="col-span-2 font-serif text-5xl 2xl:text-6xl">Contact</h2>
+					<h2 className="col-span-2 font-serif text-5xl font-medium 2xl:text-6xl">Contact</h2>
 				</div>
 				<div className="col-span-full sm:col-span-10 sm:col-start-2 lg:col-span-6 lg:col-start-6 lg:mt-24">
 					<div className="flex flex-col justify-between gap-12 md:flex-row">
 						<div className="item">
-							<h4 className="mb-6 text-2xl">Message me on</h4>
+							<h4 className="mb-6 font-serif text-2xl font-medium">Message me on</h4>
 							<ul className="space-y-5">
 								{messageData &&
 									messageData.map((item) => (
@@ -96,14 +96,14 @@ const Contact = () => {
 												href={item.url}
 												className="flex items-center gap-4">
 												<Image src={item.icon} alt="" className="w-10" width={40} height={40} />
-												<span>{item.title}</span>
+												<span className="text-lg font-medium">{item.title}</span>
 											</a>
 										</li>
 									))}
 							</ul>
 						</div>
 						<div className="item">
-							<h4 className="mb-6 text-2xl">Follow me on</h4>
+							<h4 className="mb-6 font-serif text-2xl font-medium">Follow me on</h4>
 							<ul className="space-y-5">
 								{followData &&
 									followData.map((item) => (
@@ -114,14 +114,14 @@ const Contact = () => {
 												href={item.url}
 												className="flex items-center gap-4">
 												<Image src={item.icon} alt="" className="w-10" width={40} height={40} />
-												<span>{item.title}</span>
+												<span className="text-lg font-medium">{item.title}</span>
 											</a>
 										</li>
 									))}
 							</ul>
 						</div>
 						<div className="item">
-							<h4 className="mb-6 text-2xl">Hire me on</h4>
+							<h4 className="mb-6 font-serif text-2xl font-medium">Hire me on</h4>
 							<ul className="space-y-5">
 								{hireData &&
 									hireData.map((item) => (
@@ -132,7 +132,7 @@ const Contact = () => {
 												href={item.url}
 												className="flex items-center gap-4">
 												<Image src={item.icon} alt="" className="w-10" width={40} height={40} />
-												<span>{item.title}</span>
+												<span className="text-lg font-medium">{item.title}</span>
 											</a>
 										</li>
 									))}

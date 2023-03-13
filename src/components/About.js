@@ -1,11 +1,10 @@
-
 export default function About() {
 	return (
 		<section id="About" className="py-14 md:py-20 xl:py-28">
 			<div className="container">
 				<div className="grid gap-10 md:px-16 lg:grid-cols-8 xl:gap-20 xl:px-32">
 					<div className="lg:col-span-3">
-						<h2 className="font-serif text-4xl md:text-5xl 2xl:text-6xl">About me</h2>
+						<h2 className="font-serif text-4xl font-medium md:text-5xl 2xl:text-6xl">About</h2>
 					</div>
 					<div className="lg:col-span-5 lg:mt-24">
 						<div className="space-y-4">

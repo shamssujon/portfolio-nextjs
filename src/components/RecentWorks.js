@@ -5,7 +5,7 @@ const RecentWorks = () => {
 		<section className="py-14 md:py-20 xl:py-28">
 			<div className="container grid grid-cols-12 gap-y-8 lg:gap-x-8">
 				<div className="col-span-full sm:col-span-10 sm:col-start-2 lg:col-span-4 lg:col-start-2">
-					<h2 className="col-span-2 font-serif text-5xl 2xl:text-6xl">Recent Works</h2>
+					<h2 className="col-span-2 font-serif text-5xl font-medium 2xl:text-6xl">Recent Works</h2>
 				</div>
 				<div className="col-span-full space-y-12 sm:col-span-10 sm:col-start-2 lg:col-span-6 lg:col-start-6 lg:mt-24">
 					<div className="group relative bg-slate-200 transition hover:bg-slate-300">
