@@ -66,13 +66,14 @@ export default function Navbar() {
 						{menuList.map((menuItem, index) => (
 							<li
 								key={index}
-								className={`transform transition delay-${50 * (index + 1)} ${
+								className={`transform transition ${
 									openMenu ? "visible translate-y-0 opacity-100" : "invisible translate-y-4 opacity-0"
-								}`}>
+								}`}
+								style={{ transitionDelay: `${50 * index}ms` }}>
 								<Link
 									href={menuItem.path}
 									scroll={false}
-									className="inline-block cursor-pointer p-2 font-serif text-4xl transition hover:text-emerald-400 md:text-6xl"
+									className="inline-block cursor-pointer p-2 font-serif text-4xl font-medium transition hover:text-emerald-400 md:text-6xl"
 									onClick={handleOpenMenu}>
 									{menuItem.title}
 								</Link>
