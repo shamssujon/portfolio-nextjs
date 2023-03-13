@@ -47,7 +47,7 @@ export default function ProjectPage() {
 					<div className="lg:col-span-3">
 						<div className="sticky top-20 space-y-10">
 							<Link
-								href="/#works"
+								href="/#Works"
 								className="inline-flex items-center justify-center gap-2 rounded border border-transparent px-4 py-2 text-center transition hover:border-emerald-400">
 								<BsArrowLeft />
 								<span>Go back</span>
