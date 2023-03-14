@@ -65,13 +65,13 @@ const hireData = [
 		id: 2,
 		title: "Freelancer",
 		icon: "/images/icons/brands/freelancer.svg",
-		url: "#",
+		url: "https://www.freelancer.com/u/shamsulsujon",
 	},
 	{
 		id: 3,
 		title: "Fiverr",
 		icon: "/images/icons/brands/fiverr.svg",
-		url: "#",
+		url: "https://www.fiverr.com/shams_sujon",
 	},
 ];
 

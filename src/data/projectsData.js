@@ -1,6 +1,42 @@
 export const projects = [
 	{
 		id: "01",
+		slug: "portfolio",
+		title: "My Portfolio Website",
+		images: {
+			cover: "/images/works/sujon-portfolio/portfolio-cover.jpg",
+			gallery: [
+				{
+					src: "/images/works/sujon-portfolio/homepage.png",
+					title: "Homepage",
+				},
+				{
+					src: "/images/works/sujon-portfolio/project-details.png",
+					title: "Project Details",
+				},
+			],
+		},
+		overview:
+			"I wanted to update my portfolio website, both in design and technology. First, I have designed the basic layout in Figma. Then I coaded the layout with Next JS and TailwindCSS. It is basically a landing page which covers most of my informations, about myself, skills, works, and contacts. It only has 2 pages, the homepage and the project details page.",
+		tags: ["React", "Next JS", "TailwindCSS"],
+		technologies: ["React", "Next JS", "TailwindCSS", "SWR", "Figma", "Illustrator", "Photoshop"],
+		meta: {
+			role: ["Website design and development"],
+			client: {
+				name: "Myself",
+				url: null,
+			},
+			timeline: {
+				start: "February 2023",
+				end: "March 2023",
+			},
+		},
+		url: {
+			live: "https://shamssujon.com/",
+		},
+	},
+	{
+		id: "02",
 		slug: "reboot",
 		title: "Reboot",
 		images: {
@@ -68,7 +104,7 @@ export const projects = [
 		},
 	},
 	{
-		id: "02",
+		id: "03",
 		slug: "tsl",
 		title: "Technological Solutions Limited",
 		images: {
@@ -145,4 +181,5 @@ export const projects = [
 			live: "https://tsl-home-new.shamssujon.com/",
 		},
 	},
+
 ];
