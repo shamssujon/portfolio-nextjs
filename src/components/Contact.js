@@ -38,7 +38,7 @@ const followData = [
 		id: 2,
 		title: "Linkedin",
 		icon: "/images/icons/brands/linkedin.svg",
-		url: "https://www.linkedin.com/in/shamsulsujon/",
+		url: "https://www.linkedin.com/in/shamssujon/",
 	},
 	{
 		id: 3,
