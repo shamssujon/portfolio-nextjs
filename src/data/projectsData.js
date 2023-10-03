@@ -1,6 +1,38 @@
 export const projects = [
 	{
 		id: "01",
+		slug: "awpreset",
+		title: "Advanced WP Reset",
+		images: {
+			cover: "/images/works/awpr/awpr-cover.png",
+			gallery: [
+				{
+					src: "/images/works/awpr/reset.png",
+					title: "Reset Page",
+				},
+			],
+		},
+		overview:
+			"Advanced WP Reset is a Wordpress plugin. My client, Mohammed Nasri, owner of the Owleads LTD, and contributor of the plugin, wanted to redesign the plugin. He hired me to build the frontend of the plugin. I have developed this using HTML, TailwindCSS, and Javascript.",
+		tags: ["HTML", "TailwindCSS", "Javascript"],
+		technologies: ["HTML", "TailwindCSS", "Javascript", "PHP", "Figma", "Adobe XD", "Photoshop"],
+		meta: {
+			role: ["WP Plugin Frontend Development"],
+			client: {
+				name: "Mohammed Nasri, Owleads LTD",
+				url: "https://owleads.com/",
+			},
+			timeline: {
+				start: "Jun 2023",
+				end: "August 2023",
+			},
+		},
+		url: {
+			live: "https://wordpress.org/plugins/advanced-wp-reset/",
+		},
+	},
+	{
+		id: "02",
 		slug: "portfolio",
 		title: "My Portfolio Website",
 		images: {
@@ -36,7 +68,7 @@ export const projects = [
 		},
 	},
 	{
-		id: "02",
+		id: "03",
 		slug: "reboot",
 		title: "Reboot",
 		images: {
@@ -104,7 +136,7 @@ export const projects = [
 		},
 	},
 	{
-		id: "03",
+		id: "04",
 		slug: "tsl",
 		title: "Technological Solutions Limited",
 		images: {
@@ -154,7 +186,7 @@ export const projects = [
 		},
 		overview:
 			"It is an Upwork project. I have redesigned the frontend part of the whole website from the old one with customized Bootstrap 4. I have created some illustrations, icons by myself and used appropriate free images from the internet. Most of the content are from the existing website.",
-		tags: ["HTML", "SCSS", "JS", "UI/UX", "Website redesign"],
+		tags: ["HTML", "SCSS", "JS", "Bootstrap", "UI/UX", "Website redesign"],
 		technologies: [
 			"HTML",
 			"CSS/SCSS",
